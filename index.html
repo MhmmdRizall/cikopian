@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#3D2B24">
+<title>Cikopian Home Street — Main Santai, Ngopi Dulu</title>
+<meta name="description" content="Cikopian Home Street. Kopi rumahan yang rasanya konsisten tiap gelas. Pesan sekarang lewat WhatsApp.">
+
+<!-- TODO SEBELUM GO-LIVE: ganti URL di bawah dengan domain asli -->
+<link rel="canonical" href="https://mhmmdrizall.github.io/cikopian/">
+
+<!-- Open Graph — Pasal 8.5 Constitution: kelengkapan SEO wajib -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:title" content="Cikopian Home Street">
+<meta property="og:description" content="Kopi rumahan yang rasanya konsisten tiap gelas. Pesan sekarang lewat WhatsApp.">
+<meta property="og:url" content="https://mhmmdrizall.github.io/cikopian/">
+<meta property="og:image" content="https://mhmmdrizall.github.io/cikopian/assets/og-image.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cikopian Home Street">
+<meta name="twitter:description" content="Kopi rumahan yang rasanya konsisten tiap gelas.">
+
+<!-- JSON-LD LocalBusiness — Pasal 8.5: wajib untuk bisnis fisik, penting untuk
+     muncul di Google Maps/local pack.
+     TODO SEBELUM GO-LIVE — isi 4 hal berikut dengan data asli:
+     1. streetAddress + addressLocality + addressRegion + postalCode
+     2. geo.latitude + geo.longitude (ambil dari Google Maps: klik kanan lokasi > koordinat muncul)
+     3. openingHoursSpecification (jam buka asli per hari)
+     4. sameAs (link Instagram/socmed asli jika beda dari yang tertulis) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Cikopian Home Street",
+  "image": "https://mhmmdrizall.github.io/cikopian/assets/og-image.jpg",
+  "url": "https://mhmmdrizall.github.io/cikopian/",
+  "telephone": "+628999204277",
+  "priceRange": "Rp 8.000 - Rp 20.000",
+  "servesCuisine": "Coffee, Beverages",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jl. Raya Gadog, Kp. Pandansari (dekat Alfamart)",
+    "addressLocality": "Kec. Ciawi, Kabupaten Bogor",
+    "addressRegion": "Jawa Barat",
+    "postalCode": "16720",
+    "addressCountry": "ID"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "-6.6551173",
+    "longitude": "106.8584965"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "14:00",
+      "closes": "02:00"
+    }
+  ],
+  "sameAs": [
+    "https://instagram.com/cikopian.street"
+  ]
+}
+</script>
+<!-- TODO SETELAH TESTIMONI ASLI TERISI (lihat section id="trust"):
+     tambahkan blok "aggregateRating" terpisah di dalam JSON-LD di atas, contoh:
+     "aggregateRating": {
+       "@type": "AggregateRating",
+       "ratingValue": "5.0",
+       "reviewCount": "3"
+     }
+     Jangan tambahkan field ini sekarang — mengisi aggregateRating tanpa
+     review asli yang mendasarinya adalah praktik SEO yang menyesatkan. -->
+
+
+<!-- ============================================================
+     PERFORMANCE (Pasal 8.6 Constitution — MIGRASI SELESAI 2026-07-07)
+     Tailwind CDN sudah diganti dengan build ter-purge (output.css).
+     File ini hanya berisi utility class yang benar-benar dipakai di
+     index.html — jauh lebih ringan dari CDN runtime sebelumnya.
+     CARA REBUILD kalau ada class Tailwind baru ditambahkan ke HTML:
+       npx tailwindcss -i ./input.css -o ./output.css -c ./tailwind.config.js --minify
+     (butuh tailwind.config.js + input.css, sudah disiapkan terpisah)
+============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<style>
+*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.-left-6{left:-1.5rem}.-right-24{right:-6rem}.-top-24{top:-6rem}.-top-4{top:-1rem}.bottom-0{bottom:0}.bottom-8{bottom:2rem}.left-0{left:0}.left-1\/2{left:50%}.right-0{right:0}.top-0{top:0}.z-10{z-index:10}.z-50{z-index:50}.order-1{order:1}.order-2{order:2}.col-span-1{grid-column:span 1/span 1}.col-span-2{grid-column:span 2/span 2}.row-span-2{grid-row:span 2/span 2}.mx-auto{margin-left:auto;margin-right:auto}.-mt-1{margin-top:-.25rem}.mb-1{margin-bottom:.25rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-14{margin-bottom:3.5rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-1{margin-left:.25rem}.mt-10{margin-top:2.5rem}.mt-2{margin-top:.5rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.aspect-\[4\/3\]{aspect-ratio:4/3}.aspect-\[4\/5\]{aspect-ratio:4/5}.aspect-square{aspect-ratio:1/1}.h-1\/3{height:33.333333%}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-20{height:5rem}.h-24{height:6rem}.h-64{height:16rem}.h-8{height:2rem}.h-\[420px\]{height:420px}.h-full{height:100%}.min-h-\[92vh\]{min-height:92vh}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-24{width:6rem}.w-64{width:16rem}.w-\[420px\]{width:420px}.w-full{width:100%}.w-px{width:1px}.max-w-2xl{max-width:42rem}.max-w-\[320px\]{max-width:320px}.max-w-content{max-width:1200px}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.flex-shrink-0,.shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.-translate-y-1\/3{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/3{--tw-translate-y:-33.333333%}.translate-x-1\/3{--tw-translate-x:33.333333%}.rotate-\[-4deg\],.translate-x-1\/3{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-\[-4deg\]{--tw-rotate:-4deg}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-not-allowed{cursor:not-allowed}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-14{gap:3.5rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-7{gap:1.75rem}.gap-8{gap:2rem}.gap-9{gap:2.25rem}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-3xl{border-radius:1.5rem}.rounded-\[2\.5rem\]{border-radius:2.5rem}.rounded-\[2rem\]{border-radius:2rem}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-accent{--tw-border-opacity:1;border-color:rgb(184 146 90/var(--tw-border-opacity,1))}.border-border{--tw-border-opacity:1;border-color:rgb(237 228 216/var(--tw-border-opacity,1))}.border-primary{--tw-border-opacity:1;border-color:rgb(61 43 36/var(--tw-border-opacity,1))}.border-primary\/25{border-color:rgba(61,43,36,.25)}.border-white\/20{border-color:hsla(0,0%,100%,.2)}.bg-\[\#25D366\]{--tw-bg-opacity:1;background-color:rgb(37 211 102/var(--tw-bg-opacity,1))}.bg-accent-light\/5{background-color:hsla(32,42%,63%,.05)}.bg-accent\/10{background-color:rgba(184,146,90,.1)}.bg-accent\/20{background-color:rgba(184,146,90,.2)}.bg-base{--tw-bg-opacity:1;background-color:rgb(248 243 236/var(--tw-bg-opacity,1))}.bg-ink\/20{background-color:rgba(34,30,28,.2)}.bg-primary{--tw-bg-opacity:1;background-color:rgb(61 43 36/var(--tw-bg-opacity,1))}.bg-primary\/10{background-color:rgba(61,43,36,.1)}.bg-white\/10{background-color:hsla(0,0%,100%,.1)}.object-cover{-o-object-fit:cover;object-fit:cover}.p-7{padding:1.75rem}.p-8{padding:2rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-7{padding-left:1.75rem;padding-right:1.75rem}.px-8{padding-left:2rem;padding-right:2rem}.py-14{padding-top:3.5rem;padding-bottom:3.5rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-24{padding-top:6rem;padding-bottom:6rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.pb-16{padding-bottom:4rem}.pt-32{padding-top:8rem}.pt-8{padding-top:2rem}.text-center{text-align:center}.font-body{font-family:Inter,sans-serif}.font-heading{font-family:Sora,sans-serif}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-5xl{font-size:3rem;line-height:1}.text-\[0\.95rem\]{font-size:.95rem}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-light{font-weight:300}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-\[1\.02\]{line-height:1.02}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-.025em}.tracking-wide{letter-spacing:.025em}.tracking-widest{letter-spacing:.1em}.text-accent{--tw-text-opacity:1;color:rgb(138 102 54/var(--tw-text-opacity,1))}.text-accent-light{--tw-text-opacity:1;color:rgb(201 168 118/var(--tw-text-opacity,1))}.text-base{--tw-text-opacity:1;color:rgb(248 243 236/var(--tw-text-opacity,1))}.text-base\/50{color:hsla(36,45%,95%,.5)}.text-ink{--tw-text-opacity:1;color:rgb(34 30 28/var(--tw-text-opacity,1))}.text-ink\/20{color:rgba(34,30,28,.2)}.text-ink\/30{color:rgba(34,30,28,.3)}.text-ink\/40{color:rgba(34,30,28,.4)}.text-ink\/50{color:rgba(34,30,28,.5)}.text-ink\/60{color:rgba(34,30,28,.6)}.text-ink\/70{color:rgba(34,30,28,.7)}.text-ink\/75{color:rgba(34,30,28,.75)}.text-ink\/80{color:rgba(34,30,28,.8)}.text-primary{--tw-text-opacity:1;color:rgb(61 43 36/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-80{opacity:.8}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.outline{outline-style:solid}.blur{--tw-blur:blur(8px)}.blur,.blur-3xl{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-3xl{--tw-blur:blur(64px)}.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.hover\:border-primary:hover{--tw-border-opacity:1;border-color:rgb(61 43 36/var(--tw-border-opacity,1))}.hover\:bg-primary-dark:hover{--tw-bg-opacity:1;background-color:rgb(42 29 24/var(--tw-bg-opacity,1))}.hover\:text-accent-light:hover{--tw-text-opacity:1;color:rgb(201 168 118/var(--tw-text-opacity,1))}.hover\:text-primary:hover{--tw-text-opacity:1;color:rgb(61 43 36/var(--tw-text-opacity,1))}.focus\:not-sr-only:focus{position:static;width:auto;height:auto;padding:0;margin:0;overflow:visible;clip:auto;white-space:normal}.focus\:fixed:focus{position:fixed}.focus\:left-4:focus{left:1rem}.focus\:top-4:focus{top:1rem}.focus\:z-\[100\]:focus{z-index:100}.focus\:rounded-full:focus{border-radius:9999px}.focus\:bg-primary:focus{--tw-bg-opacity:1;background-color:rgb(61 43 36/var(--tw-bg-opacity,1))}.focus\:px-5:focus{padding-left:1.25rem;padding-right:1.25rem}.focus\:py-3:focus{padding-top:.75rem;padding-bottom:.75rem}.focus\:font-heading:focus{font-family:Sora,sans-serif}.focus\:text-base:focus{font-size:1rem;line-height:1.5rem}.focus\:font-semibold:focus{font-weight:600}.focus\:text-base:focus{--tw-text-opacity:1;color:rgb(248 243 236/var(--tw-text-opacity,1))}@media (min-width:640px){.sm\:col-span-2{grid-column:span 2/span 2}.sm\:inline{display:inline}.sm\:flex{display:flex}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-start{align-items:flex-start}.sm\:text-left{text-align:left}}@media (min-width:768px){.md\:-left-10{left:-2.5rem}.md\:order-1{order:1}.md\:order-2{order:2}.md\:col-span-1{grid-column:span 1/span 1}.md\:col-span-2{grid-column:span 2/span 2}.md\:flex{display:flex}.md\:hidden{display:none}.md\:aspect-auto{aspect-ratio:auto}.md\:h-28{height:7rem}.md\:w-28{width:7rem}.md\:max-w-\[380px\]{max-width:380px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:justify-end{justify-content:flex-end}.md\:gap-10{gap:2.5rem}.md\:gap-20{gap:5rem}.md\:gap-5{gap:1.25rem}.md\:p-10{padding:2.5rem}.md\:px-16{padding-left:4rem;padding-right:4rem}.md\:py-20{padding-top:5rem;padding-bottom:5rem}.md\:py-24{padding-top:6rem;padding-bottom:6rem}.md\:py-28{padding-top:7rem;padding-bottom:7rem}.md\:py-32{padding-top:8rem;padding-bottom:8rem}.md\:pb-24{padding-bottom:6rem}.md\:pt-40{padding-top:10rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-6xl{font-size:3.75rem;line-height:1}}@media (min-width:1024px){.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:px-10{padding-left:2.5rem;padding-right:2.5rem}.lg\:text-7xl{font-size:4.5rem;line-height:1}}
+</style>
+
+<style>
+/* ============================================================
+   PATCH — utility Tailwind yang belum ter-compile ke build purge
+   (ditambahkan setelah proses purge terakhir dijalankan: Best
+   Seller section, FAQ section, badge menu, floating WA button).
+   Kalau nanti rebuild ulang via tailwindcss CLI, blok ini bisa
+   dihapus karena classnya akan otomatis ikut ter-generate.
+   ============================================================ */
+.flex-1{flex:1 1 0%}
+.max-w-lg{max-width:32rem}
+.mb-1\.5{margin-bottom:.375rem}
+.p-4{padding:1rem}
+.pb-5{padding-bottom:1.25rem}
+.px-2{padding-left:.5rem;padding-right:.5rem}
+.px-2\.5{padding-left:.625rem;padding-right:.625rem}
+.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}
+.rounded-2xl{border-radius:1rem}
+.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}
+.text-2xl{font-size:1.5rem;line-height:2rem}
+.text-left{text-align:left}
+.w-20{width:5rem}
+.bg-border{--tw-bg-opacity:1;background-color:rgb(237 228 216/var(--tw-bg-opacity,1))}
+.auto-rows-\[140px\]{grid-auto-rows:140px}
+@media (min-width:768px){.md\:auto-rows-\[160px\]{grid-auto-rows:160px}}
+.row-span-1{grid-row:span 1 / span 1}
+.row-span-2{grid-row:span 2 / span 2}
+.col-span-1{grid-column:span 1 / span 1}
+.col-span-2{grid-column:span 2 / span 2}
+@media (min-width:768px){.md\:aspect-\[2\/1\]{aspect-ratio:2/1}}
+.items-stretch{align-items:stretch}
+@media (min-width:768px){.md\:inline-flex{display:inline-flex}}
+.ml-7{margin-left:1.75rem}
+.mt-1\.5{margin-top:.375rem}
+.bg-accent\/15{background-color:rgba(184,146,90,.15)}
+.bg-accent\/8{background-color:rgba(184,146,90,.08)}
+.gap-1\.5{gap:.375rem}
+.text-\[0\.9rem\]{font-size:.9rem}
+@media (min-width:640px){.sm\:gap-6{gap:1.5rem}}
+@media (min-width:768px){.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}}
+@media (min-width:1024px){
+  .lg\:gap-10{gap:2.5rem}
+  .lg\:gap-6{gap:1.5rem}
+  .lg\:h-28{height:7rem}
+  .lg\:h-36{height:9rem}
+  .lg\:max-w-3xl{max-width:48rem}
+  .lg\:mb-3{margin-bottom:.75rem}
+  .lg\:mb-4{margin-bottom:1rem}
+  .lg\:mb-8{margin-bottom:2rem}
+  .lg\:p-14{padding:3.5rem}
+  .lg\:p-6{padding:1.5rem}
+  .lg\:text-2xl{font-size:1.5rem;line-height:2rem}
+  .lg\:text-4xl{font-size:2.25rem;line-height:2.5rem}
+  .lg\:text-base{font-size:1rem;line-height:1.5rem}
+  .lg\:text-xl{font-size:1.25rem;line-height:1.75rem}
+  .lg\:w-28{width:7rem}
+  .lg\:w-36{width:9rem}
+}
+</style>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: #F8F3EC; color: #221E1C; }
+  h1, h2, h3, .font-heading { font-family: 'Sora', sans-serif; }
+
+  /* Pasal 8 — Aksesibilitas: reduced motion dihormati di semua animasi */
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+    html { scroll-behavior: auto; }
+  }
+
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid #3D2B24;
+    outline-offset: 3px;
+  }
+
+  /* Navbar glassmorphism, blur menguat saat scroll (Pasal Motion) */
+  .glass-nav {
+    background: rgba(252, 250, 247, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+  }
+  .glass-nav.is-scrolled {
+    background: rgba(252, 250, 247, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 1px 0 rgba(61, 43, 36, 0.08);
+  }
+
+  /* Hero fade sequence — konsisten dipertahankan sebagai signature masuk (Pasal Motion #2) */
+  .hero-reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: heroFadeUp 0.85s ease forwards;
+  }
+  .hero-reveal.d1 { animation-delay: 0.05s; }
+  .hero-reveal.d2 { animation-delay: 0.2s; }
+  .hero-reveal.d3 { animation-delay: 0.38s; }
+  .hero-reveal.d4 { animation-delay: 0.55s; }
+  .hero-reveal.d5 { animation-delay: 0.7s; }
+
+  @keyframes heroFadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-reveal { opacity: 1; transform: none; animation: none; }
+  }
+
+  /* Mascot micro-interaction — signature moment brand (Pasal Motion #4: boleh "boros" di titik ini) */
+  .mascot-wrap { transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+  .mascot-wrap:hover, .mascot-wrap:focus-within {
+    transform: rotate(-2deg) translateY(-6px);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .mascot-wrap:hover, .mascot-wrap:focus-within { transform: none; }
+  }
+
+  .speech-bubble {
+    position: absolute;
+    background: #F8F3EC;
+    border: 2px solid #3D2B24;
+    box-shadow: 3px 3px 0 #3D2B24;
+  }
+
+  /* Hover button micro-lift (Pasal Motion) */
+  .btn-lift { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+  .btn-lift:hover { transform: translateY(-2px); }
+  .btn-lift:active { transform: translateY(1px); }
+
+  .eyebrow-line::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: #B8925A;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  /* Pengaman keras: apapun yang terjadi di dalam halaman (termasuk drag/swipe
+     dari slider pihak ketiga), body tidak pernah bisa di-scroll horizontal.
+     Ini lapisan pertahanan terakhir di luar kontrol elemen individual. */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body class="bg-base text-ink antialiased">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-base focus:px-5 focus:py-3 focus:rounded-full focus:font-heading focus:font-semibold">
+  Langsung ke konten utama
+</a>
+
+<!-- ============================================================
+     NAVBAR
+     Pasal 4: Logo + Menu + CTA WhatsApp (primer, solid, kontras)
+     Sticky + glassmorphism, blur menguat saat scroll (JS di bawah)
+============================================================ -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 glass-nav">
+  <div class="max-w-content mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="#" class="font-heading font-bold text-lg tracking-tight text-primary flex items-center gap-2">
+      <i class='bx bxs-coffee-togo text-accent text-xl'></i>
+      Cikopian
+      <span class="hidden sm:inline text-[11px] font-body font-medium tracking-widest text-ink/50 uppercase ml-1">Home Street</span>
+    </a>
+
+    <!-- Menu desktop -->
+    <nav class="hidden md:flex items-center gap-9 font-body text-sm font-medium text-ink/70">
+      <a href="#menu" class="hover:text-primary transition-colors">Menu</a>
+      <a href="#story" class="hover:text-primary transition-colors">Cerita</a>
+      <a href="#lokasi" class="hover:text-primary transition-colors">Lokasi</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <!-- CTA WhatsApp navbar — desktop only. Mobile sudah ada CTA di Hero +
+           floating WA saat scroll, jadi navbar WA di mobile jadi redundan (Pasal 4 & 7) -->
+      <a href="https://wa.me/628999204277?text=Halo%20Cikopian%2C%20saya%20mau%20pesan%20kopi%20%E2%98%95"
+         target="_blank" rel="noopener"
+         class="btn-lift hidden md:inline-flex items-center gap-2 bg-primary text-base font-heading font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-primary-dark">
+        <i class='bx bxl-whatsapp text-base'></i>
+        <span class="hidden sm:inline">Pesan</span>
+      </a>
+
+      <!-- Mobile menu button -->
+      <button type="button" id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Buka menu navigasi"
+        class="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-border text-primary">
+        <i class='bx bx-menu text-xl' id="mobile-menu-icon"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile nav panel -->
+  <nav id="mobile-menu" class="md:hidden hidden border-t border-border bg-base">
+    <div class="max-w-content mx-auto px-6 py-5 flex flex-col gap-1 font-body text-base font-medium text-ink/80">
+      <a href="#menu" class="py-3 border-b border-border">Menu</a>
+      <a href="#story" class="py-3 border-b border-border">Cerita</a>
+      <a href="#lokasi" class="py-3">Lokasi</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+
+<!-- ============================================================
+     HERO SECTION
+     Focal point 1: Headline (personality-driven, bukan foto kopi generik)
+     Focal point 2: CTA (Pesan Sekarang jadi aksi paling menonjol)
+     Focal point 3: Visual brand (mascot rakun sebagai wajah brand)
+
+     Pasal 1: personality menang di atas tren visual generik
+     Pasal 4: mascot wajib berperan, bukan dekorasi kosong
+     Pasal 5: copy nada ngobrol, dilarang bahasa iklan kaku
+============================================================ -->
+<section class="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden min-h-[92vh] flex items-center">
+
+  <!-- Aksen hijau sebagai bidang besar, bukan cuma ikon kecil (Pasal 2) -->
+  <div class="absolute -top-24 -right-24 w-[420px] h-[420px] bg-accent/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-full h-1/3 bg-accent-light/5"></div>
+
+  <div class="relative z-10 max-w-content mx-auto px-6 lg:px-10 w-full">
+    <div class="grid md:grid-cols-2 gap-14 md:gap-10 items-center">
+
+      <!-- Kolom kiri: Headline + CTA (focal point 1 & 2) -->
+      <div class="order-2 md:order-1">
+        <p class="hero-reveal d1 eyebrow-line font-body text-sm font-medium tracking-widest uppercase text-accent mb-6">
+          Home Street Coffee
+        </p>
+
+        <!-- Headline: kontras weight ekstrem sesuai Pasal 2 tipografi -->
+        <h1 class="hero-reveal d2 font-heading leading-[1.02] mb-6">
+          <span class="block font-light text-3xl md:text-4xl text-ink/70">Main santai,</span>
+          <span class="block font-extrabold text-5xl md:text-6xl lg:text-7xl text-primary -mt-1">ngopi dulu.</span>
+        </h1>
+
+        <p class="hero-reveal d3 font-body text-ink/70 text-lg leading-relaxed max-w-md mb-10">
+          Diracik satu per satu, rasanya dijaga, harganya mulai 8K. Tinggal chat, kami yang antar.
+        </p>
+
+        <!-- CTA — Primary: Pesan Sekarang, Secondary: Lihat Menu (Pasal 7) -->
+        <div class="hero-reveal d4 flex flex-wrap items-center gap-4">
+          <a href="https://wa.me/628999204277?text=Halo%20Cikopian%2C%20saya%20mau%20pesan%20kopi%20%E2%98%95"
+             target="_blank" rel="noopener"
+             class="btn-lift inline-flex items-center gap-2 bg-primary text-base font-heading font-semibold px-7 py-3.5 rounded-full hover:bg-primary-dark text-[0.95rem]">
+            <i class='bx bxl-whatsapp text-lg'></i>
+            Pesan Sekarang
+          </a>
+          <a href="#menu"
+             class="btn-lift inline-flex items-center gap-2 border-2 border-primary/25 text-primary font-heading font-medium px-7 py-3.5 rounded-full hover:border-primary text-[0.95rem]">
+            Lihat Menu
+            <i class='bx bx-right-arrow-alt text-lg'></i>
+          </a>
+        </div>
+
+        <p class="hero-reveal d5 font-body text-xs text-ink/40 mt-6">
+          #janganlupadikocok — biar rasanya makin mantap 😉
+        </p>
+      </div>
+
+      <!-- Kolom kanan: Mascot sebagai wajah brand (focal point 3) -->
+      <div class="order-1 md:order-2 flex justify-center md:justify-end">
+        <div class="hero-reveal d3 mascot-wrap relative max-w-[320px] md:max-w-[380px] w-full" tabindex="0">
+          <!-- Placeholder mudah diganti: cukup ganti src ini dengan foto/ilustrasi rakun asli.
+               fetchpriority="high" + loading="eager" karena ini kemungkinan besar LCP element
+               (Pasal 8.6 Constitution — performance tuning) -->
+          <img src="assets/mascot-placeholder.jpg"
+               alt="Maskot Cikopian, rakun berhoodie hijau memegang segelas kopi"
+               class="w-full rounded-[2rem] shadow-xl"
+               fetchpriority="high" loading="eager" width="380" height="434">
+
+          <div class="speech-bubble rounded-xl px-4 py-2.5 -top-4 -left-6 md:-left-10 rotate-[-4deg]">
+            <span class="font-heading font-semibold text-sm text-primary">siap racik! ☕</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-ink/30 text-xs font-body tracking-widest uppercase hidden sm:flex items-center gap-2">
+    <span class="w-px h-8 bg-ink/20 inline-block"></span>
+    Scroll
+  </div>
+</section>
+
+<!-- ============================================================
+     STORY SECTION
+     Focal point: narasi personal singkat, nada ngobrol (Pasal 5)
+     Layout beda dari Hero (bukan sekadar copy-paste grid foto-teks
+     seperti versi sebelumnya) — foto "raw"/dekat, bukan artsy jauh
+     Pasal 3: ini layout ke-2, jadi masih boleh foto-teks,
+     tapi section ke-3 (Menu) WAJIB beda bentuk total
+============================================================ -->
+<section id="story" class="py-24 md:py-32 bg-primary text-base relative overflow-hidden">
+
+  <!-- Aksen hijau sebagai bidang, bukan sekadar ikon (Pasal 2) -->
+  <div class="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3"></div>
+
+  <div class="relative z-10 max-w-content mx-auto px-6 lg:px-10">
+    <div class="grid md:grid-cols-2 gap-14 md:gap-20 items-center">
+
+      <!-- Foto: raw, dekat, bukan interior artsy jauh (Layout Direction Story) -->
+      <!-- FOTO SEMENTARA dari Unsplash — ganti ke foto proses racik asli kapan saja siap -->
+      <div class="rounded-3xl overflow-hidden aspect-[4/5] order-2 md:order-1">
+        <img src="https://images.unsplash.com/photo-1695306316353-3b9036a5fa9b?fm=jpg&w=960&h=1200&fit=crop&auto=format&q=80"
+             alt="Proses racik kopi Cikopian, diambil dari dekat"
+             class="w-full h-full object-cover" loading="lazy">
+      </div>
+
+      <div class="order-1 md:order-2">
+        <p class="eyebrow-line font-body text-sm font-medium tracking-widest uppercase text-accent-light mb-5">Ceritanya Gini</p>
+
+        <!-- Copy nada ngobrol, bukan press release (Pasal 5) -->
+        <h2 class="font-heading font-bold text-3xl md:text-4xl leading-tight mb-6">
+          Ngga pernah ada rencana buka coffee shop.
+        </h2>
+
+        <p class="font-body text-base leading-relaxed mb-4 opacity-80">
+          Awalnya cuma racik kopi buat sendiri, iseng-iseng doang. Terus tetangga nitip, temen nitip, terus temennya temen ikutan nitip. Ngga pernah niat bikin "brand kopi" apalagi mikirin logo — orang-orang aja yang keterusan nyoba.
+        </p>
+        <p class="font-body text-base leading-relaxed opacity-80">
+          Satu hal yang dipegang dari awal sampai sekarang: rasanya ngga boleh berubah-ubah. Gelas yang bikin orang balik lagi harus sama persis rasanya sama gelas yang kamu pesan hari ini — itu aja yang penting.
+        </p>
+
+        <!-- Microcopy jenaka, di titik non-kritis (Pasal 5.4) -->
+        <p class="font-body text-sm mt-8 flex items-center gap-2" style="color:#8A6636;">
+          <i class='bx bx-coffee-togo text-base'></i>
+          Sederhana cara bikinnya, serius soal rasanya. 🤎
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOUNDER SECTION (baru — 2026-07-07)
+     Terinspirasi gaya card personal Bytek (foto bulat + quote +
+     handle IG), tapi warna disesuaikan ke tema cream/espresso
+     Cikopian, bukan dark/cyan seperti Bytek.
+     TODO ASET: pastikan assets/founder.jpg sudah di-push ke GitHub.
+     Quote di bawah ini masih draft — Pun Guru bisa edit manual.
+============================================================ -->
+<section id="founder" class="py-20 md:py-24 bg-base">
+  <div class="max-w-content mx-auto px-6 lg:px-10">
+    <div class="max-w-2xl lg:max-w-3xl mx-auto bg-accent/8 border border-border rounded-3xl p-8 md:p-10 lg:p-14 flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-6 lg:gap-10 text-center sm:text-left">
+
+      <img src="assets/founder.jpg"
+           alt="Founder Cikopian Home Street"
+           width="112" height="112"
+           class="w-24 h-24 md:w-28 md:h-28 lg:w-36 lg:h-36 rounded-full object-cover border-2 border-accent shrink-0 bg-border"
+           loading="lazy">
+
+      <div>
+        <h3 class="font-heading font-bold text-lg lg:text-2xl text-primary mb-2 lg:mb-3">NOOR</h3>
+        <p class="font-body text-ink/70 text-base lg:text-xl italic leading-relaxed mb-3 lg:mb-4">
+          "Harga boleh sederhana. Yang penting rasanya ngga pernah seadanya."
+        </p>
+        <a href="https://www.instagram.com/28_herlinaaa"
+           target="_blank" rel="noopener noreferrer"
+           class="font-body text-sm lg:text-base text-accent hover:text-accent-light transition-colors inline-flex items-center gap-1">
+          @28_herlinaaa <i class='bx bx-link-external text-xs'></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BEST SELLER SECTION (baru — 2026-07-08)
+     Bantu first-time visitor ambil keputusan cepat sebelum masuk
+     ke grid Menu penuh. Layout: single spotlight card, beda total
+     dari Founder (card kecil horizontal) & Menu (grid tab) di atas
+     dan bawahnya — sesuai Pasal 3.1 (section berturutan wajib beda)
+============================================================ -->
+<section id="best-seller" class="py-16 md:py-20 bg-base">
+  <div class="max-w-content mx-auto px-6 lg:px-10">
+    <div class="max-w-2xl lg:max-w-3xl mx-auto text-center bg-accent/8 border border-border rounded-[2rem] p-8 md:p-10 lg:p-14">
+      <p class="eyebrow-line justify-center font-body text-sm font-medium tracking-widest uppercase text-accent mb-4 flex items-center">Kalau Baru Pertama Kali</p>
+      <h2 class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-primary leading-tight mb-6 lg:mb-8">
+        Mulai dari sini aja.
+      </h2>
+
+      <div class="flex items-center gap-4 lg:gap-6 bg-base rounded-2xl p-4 lg:p-6 border border-border text-left">
+        <div class="w-20 h-20 lg:w-28 lg:h-28 rounded-xl overflow-hidden shrink-0 bg-border">
+          <img src="menu/coffee-butterscotch.jpg" alt="Coffee Butterscotch" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="flex-1">
+          <span class="inline-block font-body text-xs font-semibold tracking-wide text-accent bg-accent/15 px-2.5 py-0.5 rounded-full mb-1.5">Paling Sering Dipesan</span>
+          <h3 class="font-heading font-semibold text-lg lg:text-2xl text-ink mb-1">Coffee Butterscotch</h3>
+          <div class="flex items-center gap-3 font-body text-sm lg:text-base">
+            <span class="text-ink/40">M</span><span class="font-semibold text-primary">13K</span>
+            <span class="text-ink/20">•</span>
+            <span class="text-ink/40">L</span><span class="font-semibold text-primary">15K</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://wa.me/628999204277?text=Halo%20Cikopian%2C%20saya%20mau%20pesan%20Coffee%20Butterscotch%20%E2%98%95"
+         target="_blank" rel="noopener"
+         class="btn-lift inline-flex items-center gap-2 bg-primary text-base font-heading font-semibold px-7 py-3 rounded-full mt-6 text-[0.9rem]">
+        <i class='bx bxl-whatsapp text-lg'></i>
+        Pesan Ini Dulu
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MENU SECTION
+     Pasal 3.1: WAJIB beda layout total dari Hero (mascot-split) &
+     Story (foto-solid-coklat) — di sini pakai grid card + tab,
+     tanpa foto besar sejajar teks lagi
+     Pasal 4: kejelasan harga tetap prioritas #1, microcopy jenaka
+     hanya di titik non-kritis (varian botol)
+     Focal point: harga & pilihan menu — bukan foto
+============================================================ -->
+<section id="menu" class="py-24 md:py-32 bg-base">
+  <div class="max-w-content mx-auto px-6 lg:px-10">
+
+    <div class="text-center max-w-xl mx-auto mb-14">
+      <p class="eyebrow-line justify-center font-body text-sm font-medium tracking-widest uppercase text-accent mb-4 flex items-center">Menu</p>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary leading-tight mb-4">
+        Tinggal pilih, ngga usah mikir lama.
+      </h2>
+      <p class="font-body text-ink/60 text-base leading-relaxed">
+        Tiga kategori, harga jelas dari awal. Ngga ada menu rahasia yang bikin bingung milih.
+      </p>
+    </div>
+
+    <!-- Tab kategori -->
+    <div class="flex flex-wrap justify-center gap-3 mb-12" role="tablist" aria-label="Kategori menu">
+      <button type="button" data-tab="ice-coffee" role="tab" aria-selected="true"
+        class="menu-tab-btn is-active font-heading font-medium text-sm px-6 py-3 rounded-full border-2 border-primary">
+        Ice Coffee
+      </button>
+      <button type="button" data-tab="non-coffee" role="tab" aria-selected="false"
+        class="menu-tab-btn font-heading font-medium text-sm px-6 py-3 rounded-full border-2 border-border">
+        Ice Non-Coffee
+      </button>
+      <button type="button" data-tab="botol" role="tab" aria-selected="false"
+        class="menu-tab-btn font-heading font-medium text-sm px-6 py-3 rounded-full border-2 border-border">
+        Varian Botol
+      </button>
+    </div>
+
+    <!-- Grid card dengan foto produk asli per item.
+         TODO ASET: pastikan semua path menu/*.jpg berikut ini
+         sudah di-push ke GitHub dengan nama file persis seperti di bawah.
+         Kalau nama file final beda, sesuaikan src di masing-masing <img>. -->
+    <div id="panel-ice-coffee" class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="menu-card group">
+        <div class="menu-card-img-wrap">
+          <img src="menu/cikopian-street.jpg" alt="Cikopian Street" class="menu-card-img" loading="lazy">
+        </div>
+        <div class="menu-card-body">
+          <span class="inline-block font-body text-[11px] font-semibold tracking-wide text-accent bg-accent/15 px-2 py-0.5 rounded-full mb-2">Signature</span>
+          <h3 class="font-heading font-semibold text-lg text-ink mb-1">Cikopian Street</h3>
+          <p class="font-body text-xs text-ink/50 mb-2 leading-relaxed">Racikan andalan yang jadi ciri khas Cikopian — pas buat yang mau kenalan pertama kali.</p>
+          <div class="flex items-center justify-between gap-2 font-body text-sm">
+            <div class="flex items-center gap-3">
+              <span class="text-ink/40">M</span><span class="font-semibold text-primary">13K</span>
+            <span class="text-ink/20">•</span>
+            <span class="text-ink/40">L</span><span class="font-semibold text-primary">15K</span>
+            </div>
+            <a href="https://wa.me/628999204277?text=Halo%20Cikopian%2C%20saya%20mau%20pesan%20Cikopian%20Street%20(size%3A%20)..."
+             target="_blank" rel="noopener"
+             class="menu-card-order-btn shrink-0 inline-flex items-center gap-1.5 font-body text-xs font-semibold text-primary">
+            <i class='bx bxl-whatsapp text-sm'></i> Pesan
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card group">
+        <div class="menu-card-img-wrap">
+          <img src="menu/coffee-butterscotch.jpg" alt="Coffee Butterscotch" class="menu-card-img" loading="lazy">
+        </div>
+        <div class="menu-card-body">
+          <span class="inline-block font-body text-[11px] font-semibold tracking-wide text-accent bg-accent/15 px-2 py-0.5 rounded-full mb-2">Best Seller</span>
+          <h3 class="font-heading font-semibold text-lg text-ink mb-1">Coffee Butterscotch</h3>
+          <p class="font-body text-xs text-ink/50 mb-2 leading-relaxed">Manis karamel yang pas, ngga eneg — paling sering dipesan, banyak yang balik lagi buat ini.</p>
+          <div class="flex items-center justify-between gap-2 font-body text-sm">
+            <div class="flex items-center gap-3">
+              <span class="text-ink/40">M</span><span class="font-semibold text-primary">13K</span>
+            <span class="text-ink/20">•</span>
+            <span class="text-ink/40">L</span><span class="font-semibold text-primary">15K</span>
+            </div>
+            <a href="https://wa.me/628999204277?text=Halo%20Cikopian%2C%20saya%20mau%20pesan%20Coffee%20Butterscotch%20(size%3A%20)..."
+             target="_blank" rel="noopener"
+             class="menu-card-order-btn shrink-0 inline-flex items-center gap-1.5 font-body text-xs font-semibold text-primary">
+            <i class='bx bxl-whatsapp text-sm'></i> Pesan
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card group">
+        <div class="menu-card-img-wrap">
+          <img src="menu/coffee-vanilla.jpg" alt="Coffee Vanilla" class="menu-card-img" loading="lazy">
+        </div>
+        <div class="menu-card-body">
+          <h3 class="font-heading font-semibold text-lg text-ink mb-1">Coffee Vanilla</h3>
+          <p class="font-body text-xs text-ink/50 mb-2 leading-relaxed">Lembut dan wangi, buat yang suka kopi ngga terlalu berat.</p>
+          <div class="flex items-center justify-between gap-2 font-body text-sm">
+            <div class="flex items-center gap-3">
+              <span class="text-ink/40">M</span><span class="font-semibold text-primary">13K</span>
+            <span class="text-ink/20">•</span>
+            <span class="text-ink/40">L</span><span class="font-semibold text-primary">15K</span>
+            </div>
+            <a href="https://wa.me/628999204277?text=Halo%20Cikopian%2C%20saya%20mau%20pesan%20Coffee%20Vanilla%20(size%3A%20)..."
+             target="_blank" rel="noopener"
+             class="menu-card-order-btn shrink-0 inline-flex items-center gap-1.5 font-body text-xs font-semibold text-primary">
+            <i class='bx bxl-whatsapp text-sm'></i> Pesan
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card group">
+        <div class="menu-card-img-wrap">
+          <img src="menu/coffee-cappuccino.jpg" alt="Coffee Cappuccino" class="menu-card-img" loading="lazy">
+        </div>
+        <div class="menu-card-body">
+          <h3 class="font-heading font-semibold text-lg text-ink mb-1">Coffee Cappuccino</h3>
+          <p class="font-body text-xs text-ink/50 mb-2 leading-relaxed">Klasik, pahitnya pas — pilihan aman buat yang doyan kopi murni.</p>
+          <div class="flex items-center justify-between gap-2 font-body text-sm">
+            <div class="flex items-center gap-3">
+              <span class="text-ink/40">M</span><span class="font-semibold text-primary">10K</span>
+            <span class="text-ink/20">•</span>
+            <span class="text-ink/40">L</span><span class="font-semibold text-primary">13K</span>
+            </div>
+            <a href="https://wa.me/628999204277?text=Halo%20Cikopian%2C%20saya%20mau%20pesan%20Coffee%20Cappuccino%20(size%3A%20)..."
+             target="_blank" rel="noopener"
+             class="menu-card-order-btn shrink-0 inline-flex items-center gap-1.5 font-body text-xs font-semibold text-primary">
+            <i class='bx bxl-whatsapp text-sm'></i> Pesan
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card group">
+        <div class="menu-card-img-wrap">
+          <img src="menu/caffe-latte.jpg" alt="Caffe Latte" class="menu-card-img" loading="lazy">
+        </div>
+        <div class="menu-card-body">
+          <h3 class="font-heading font-semibold text-lg text-ink mb-1">Caffe Latte</h3>
+          <p class="font-body text-xs text-ink/50 mb-2 leading-relaxed">Susu dan kopinya seimbang, creamy tapi tetep berasa kopinya.</p>
+          <div class="flex items-center justify-between gap-2 font-body text-sm">
+            <div class="flex items-center gap-3">
+              <span class="text-ink/40">M</span><span class="font-semibold text-primary">10K</span>
+            <span class="text-ink/20">•</span>
+            <span class="text-ink/40">L</span><span class="font-semibold text-primary">13K</span>
+            </div>
+            <a href="https://wa.me/628999204277?text=Halo%20Cikopian%2C%20saya%20mau%20pesan%20Caffe%20Latte%20(size%3A%20)..."
+             target="_blank" rel="noopener"
+             class="menu-card-order-btn shrink-0 inline-flex items-center gap-1.5 font-body text-xs font-semibold text-primary">
+            <i class='bx bxl-whatsapp text-sm'></i> Pesan
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card group">
+        <div class="menu-card-img-wrap">
+          <img src="menu/caffe-mocacino.jpg" alt="Caffe Mocacino" class="menu-card-img" loading="lazy">
+        </div>
+        <div class="menu-card-body">
+          <h3 class="font-heading font-semibold text-lg text-ink mb-1">Caffe Mocacino</h3>
+          <p class="font-body text-xs text-ink/50 mb-2 leading-relaxed">Perpaduan kopi dan coklat, manis gurih yang bikin nagih.</p>
+          <div class="flex items-center justify-between gap-2 font-body text-sm">
+            <div class="flex items-center gap-3">
+              <span class="text-ink/40">M</span><span class="font-semibold text-primary">10K</span>
+            <span class="text-ink/20">•</span>
+            <span class="text-ink/40">L</span><span class="font-semibold text-primary">13K</span>
+            </div>
+            <a href="https://wa.me/628999204277?text=Halo%20Cikopian%2C%20saya%20mau%20pesan%20Caffe%20Mocacino%20(size%3A%20)..."
+             target="_blank" rel="noopener"
+             class="menu-card-order-btn shrink-0 inline-flex items-center gap-1.5 font-body text-xs font-semibold text-primary">
+            <i class='bx bxl-whatsapp text-sm'></i> Pesan
+          </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="panel-non-coffee" class="menu-panel hidden grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="menu-card group">
+        <div class="menu-card-img-wrap">
+          <img src="menu/thai-tea.jpg" alt="Thai Tea" class="menu-card-img" loading="lazy">
+        </div>
+        <div class="menu-card-body">
+          <h3 class="font-heading font-semibold text-lg text-ink mb-1">Thai Tea</h3>
+          <p class="font-body text-xs text-ink/50 mb-2 leading-relaxed">Manis creamy khas teh Thailand, seger buat siang-siang panas.</p>
+          <div class="flex items-center justify-between gap-2 font-body text-sm">
+            <div class="flex items-center gap-3">
+              <span class="text-ink/40">M</span><span class="font-semibold text-primary">8K</span>
+            <span class="text-ink/20">•</span>
+            <span class="text-ink/40">L</span><span class="font-semibold text-primary">10K</span>
+            </div>
+            <a href="https://wa.me/628999204277?text=Halo%20Cikopian%2C%20saya%20mau%20pesan%20Thai%20Tea%20(size%3A%20)..."
+             target="_blank" rel="noopener"
+             class="menu-card-order-btn shrink-0 inline-flex items-center gap-1.5 font-body text-xs font-semibold text-primary">
+            <i class='bx bxl-whatsapp text-sm'></i> Pesan
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card group">
+        <div class="menu-card-img-wrap">
+          <img src="menu/matcha-latte.jpg" alt="Matcha Latte" class="menu-card-img" loading="lazy">
+        </div>
+        <div class="menu-card-body">
+          <h3 class="font-heading font-semibold text-lg text-ink mb-1">Matcha Latte</h3>
+          <p class="font-body text-xs text-ink/50 mb-2 leading-relaxed">Green tea Jepang yang creamy, buat yang mau rehat tanpa kafein tinggi.</p>
+          <div class="flex items-center justify-between gap-2 font-body text-sm">
+            <div class="flex items-center gap-3">
+              <span class="text-ink/40">M</span><span class="font-semibold text-primary">12K</span>
+            <span class="text-ink/20">•</span>
+            <span class="text-ink/40">L</span><span class="font-semibold text-primary">15K</span>
+            </div>
+            <a href="https://wa.me/628999204277?text=Halo%20Cikopian%2C%20saya%20mau%20pesan%20Matcha%20Latte%20(size%3A%20)..."
+             target="_blank" rel="noopener"
+             class="menu-card-order-btn shrink-0 inline-flex items-center gap-1.5 font-body text-xs font-semibold text-primary">
+            <i class='bx bxl-whatsapp text-sm'></i> Pesan
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card group">
+        <div class="menu-card-img-wrap">
+          <img src="menu/chocolate.jpg" alt="Chocolate" class="menu-card-img" loading="lazy">
+        </div>
+        <div class="menu-card-body">
+          <h3 class="font-heading font-semibold text-lg text-ink mb-1">Chocolate</h3>
+          <p class="font-body text-xs text-ink/50 mb-2 leading-relaxed">Coklat pekat yang manis pas, favorit yang ngga suka kopi.</p>
+          <div class="flex items-center justify-between gap-2 font-body text-sm">
+            <div class="flex items-center gap-3">
+              <span class="text-ink/40">M</span><span class="font-semibold text-primary">12K</span>
+            <span class="text-ink/20">•</span>
+            <span class="text-ink/40">L</span><span class="font-semibold text-primary">15K</span>
+            </div>
+            <a href="https://wa.me/628999204277?text=Halo%20Cikopian%2C%20saya%20mau%20pesan%20Chocolate%20(size%3A%20)..."
+             target="_blank" rel="noopener"
+             class="menu-card-order-btn shrink-0 inline-flex items-center gap-1.5 font-body text-xs font-semibold text-primary">
+            <i class='bx bxl-whatsapp text-sm'></i> Pesan
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card group">
+        <div class="menu-card-img-wrap">
+          <img src="menu/taro.jpg" alt="Taro" class="menu-card-img" loading="lazy">
+        </div>
+        <div class="menu-card-body">
+          <h3 class="font-heading font-semibold text-lg text-ink mb-1">Taro</h3>
+          <p class="font-body text-xs text-ink/50 mb-2 leading-relaxed">Rasa ubi ungu yang unik dan creamy, beda dari menu kebanyakan.</p>
+          <div class="flex items-center justify-between gap-2 font-body text-sm">
+            <div class="flex items-center gap-3">
+              <span class="text-ink/40">M</span><span class="font-semibold text-primary">12K</span>
+            <span class="text-ink/20">•</span>
+            <span class="text-ink/40">L</span><span class="font-semibold text-primary">15K</span>
+            </div>
+            <a href="https://wa.me/628999204277?text=Halo%20Cikopian%2C%20saya%20mau%20pesan%20Taro%20(size%3A%20)..."
+             target="_blank" rel="noopener"
+             class="menu-card-order-btn shrink-0 inline-flex items-center gap-1.5 font-body text-xs font-semibold text-primary">
+            <i class='bx bxl-whatsapp text-sm'></i> Pesan
+          </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="panel-botol" class="menu-panel hidden grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="menu-card group">
+        <div class="menu-card-img-wrap">
+          <img src="menu/botol-200ml.jpg" alt="Varian Botol 200 ML" class="menu-card-img" loading="lazy">
+        </div>
+        <div class="menu-card-body">
+          <h3 class="font-heading font-semibold text-lg text-ink mb-1">200 ML</h3>
+          <p class="font-body text-xs text-ink/50 mb-2 leading-relaxed">Cocok buat stok kulkas, tinggal kocok pas mau minum.</p>
+          <div class="flex items-center justify-between gap-2 font-body text-sm">
+            <span class="font-semibold text-primary">20K</span>
+            <a href="https://wa.me/628999204277?text=Halo%20Cikopian%2C%20saya%20mau%20pesan%20Varian%20Botol%20200ML..."
+               target="_blank" rel="noopener"
+               class="menu-card-order-btn shrink-0 inline-flex items-center gap-1.5 font-body text-xs font-semibold text-primary">
+              <i class='bx bxl-whatsapp text-sm'></i> Pesan
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card group">
+        <div class="menu-card-img-wrap">
+          <img src="menu/botol-150ml.jpg" alt="Varian Botol 150 ML" class="menu-card-img" loading="lazy">
+        </div>
+        <div class="menu-card-body">
+          <h3 class="font-heading font-semibold text-lg text-ink mb-1">150 ML</h3>
+          <p class="font-body text-xs text-ink/50 mb-2 leading-relaxed">Pas buat sekali habis, praktis dibawa ke mana aja.</p>
+          <div class="flex items-center justify-between gap-2 font-body text-sm">
+            <span class="font-semibold text-primary">15K</span>
+            <a href="https://wa.me/628999204277?text=Halo%20Cikopian%2C%20saya%20mau%20pesan%20Varian%20Botol%20150ML..."
+               target="_blank" rel="noopener"
+               class="menu-card-order-btn shrink-0 inline-flex items-center gap-1.5 font-body text-xs font-semibold text-primary">
+              <i class='bx bxl-whatsapp text-sm'></i> Pesan
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Microcopy jenaka, titik non-kritis (Pasal 5.4) -->
+      <p class="sm:col-span-2 text-center font-body text-sm text-ink/50 mt-2">
+        🥤 jangan lupa dikocok dulu ya, biar rasanya nyampur sempurna
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .menu-tab-btn { color: #3D2B24; background: transparent; transition: all 0.2s ease; }
+  .menu-tab-btn.is-active { background: #3D2B24; color: #F8F3EC; }
+
+  .menu-card {
+    background: #F8F3EC;
+    border: 1px solid #EDE4D8;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .menu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -8px rgba(61, 43, 36, 0.15);
+    border-color: #B8925A;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .menu-card:hover { transform: none; }
+  }
+  .menu-card-img-wrap {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #EDE4D8;
+    overflow: hidden;
+  }
+  .menu-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .menu-card:hover .menu-card-img {
+    transform: scale(1.05);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .menu-card:hover .menu-card-img { transform: none; }
+  }
+  .menu-card-body {
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+  .menu-card-order-btn {
+    border: 1px solid #EDE4D8;
+    border-radius: 9999px;
+    padding: 0.4rem 0.9rem;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+  }
+  .menu-card-order-btn:hover {
+    background-color: rgba(184, 146, 90, 0.1);
+    border-color: #B8925A;
+  }
+</style>
+
+<script>
+  const tabButtons = document.querySelectorAll('.menu-tab-btn');
+  const panels = {
+    'ice-coffee': document.getElementById('panel-ice-coffee'),
+    'non-coffee': document.getElementById('panel-non-coffee'),
+    'botol': document.getElementById('panel-botol'),
+  };
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabButtons.forEach(b => {
+        b.classList.remove('is-active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-selected', 'true');
+
+      Object.values(panels).forEach(p => { if (p) p.classList.add('hidden'); });
+      if (panels[btn.dataset.tab]) panels[btn.dataset.tab].classList.remove('hidden');
+    });
+  });
+</script>
+
+<!-- ============================================================
+     GALLERY SECTION (baru — Pasal 3.3 Constitution)
+     Bukti visual nyata: booth, proses racik, suasana — bukan stok
+     CATATAN: sengaja TETAP DITAMPILKAN (tidak di-hide) atas permintaan
+     Pun Guru untuk keperluan cek layout di Chrome selagi aset gambar
+     disiapkan. TODO SEBELUM LINK INI DIBAGIKAN KE PUBLIK: pastikan
+     4 foto gallery asli sudah terpasang — kalau belum, WAJIB tambah
+     class `hidden` di section ini dulu sebelum publish ke bio sosmed.
+     Layout: grid mosaic asimetris — beda total dari Hero/Story/Menu
+============================================================ -->
+<section id="gallery" class="py-24 md:py-32 bg-base">
+  <div class="max-w-content mx-auto px-6 lg:px-10">
+
+    <div class="text-center max-w-xl mx-auto mb-14">
+      <p class="eyebrow-line justify-center font-body text-sm font-medium tracking-widest uppercase text-accent mb-4 flex items-center">Bukan Katalog</p>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary leading-tight mb-4">
+        Ini beneran ada, bukan cuma di foto.
+      </h2>
+      <p class="font-body text-ink/60 text-base leading-relaxed">
+        Booth-nya, proses racik, sampai yang nongkrong — semua asli, bukan pinjam foto orang.
+      </p>
+    </div>
+
+    <!-- Grid mosaic asimetris — beda total dari layout Hero/Story/Menu (Pasal 3.1) -->
+    <!-- FOTO SEMENTARA dari Unsplash (bukan foto asli Cikopian) — ganti ke
+         foto booth/produk asli kapan saja siap, tinggal replace src="..." -->
+    <div class="grid grid-cols-2 md:grid-cols-4 auto-rows-[140px] md:auto-rows-[160px] gap-4 md:gap-5">
+      <div class="col-span-2 row-span-2 rounded-3xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1742399505376-8b0202c23971?fm=jpg&w=1200&h=1200&fit=crop&auto=format&q=80"
+             alt="Suasana booth kopi yang hangat dan nyaman"
+             class="w-full h-full object-cover" loading="lazy">
+      </div>
+      <div class="col-span-1 row-span-1 rounded-3xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1724962867157-488b16c6ed39?fm=jpg&w=800&h=800&fit=crop&auto=format&q=80"
+             alt="Suasana santai menikmati kopi"
+             class="w-full h-full object-cover" loading="lazy">
+      </div>
+      <div class="col-span-1 row-span-1 rounded-3xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?fm=jpg&w=800&h=800&fit=crop&auto=format&q=80"
+             alt="Detail biji kopi pilihan Cikopian"
+             class="w-full h-full object-cover" loading="lazy">
+      </div>
+      <div class="col-span-1 row-span-2 rounded-3xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1768345755887-3eea6a0ad107?fm=jpg&w=800&h=1000&fit=crop&auto=format&q=80"
+             alt="Es kopi Cikopian siap dinikmati"
+             class="w-full h-full object-cover" loading="lazy">
+      </div>
+      <div class="col-span-1 row-span-2 rounded-3xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1761271046396-97d231b59dd7?fm=jpg&q=70&w=800&h=1000&fit=crop&auto=format"
+             alt="Proses racik kopi Cikopian"
+             class="w-full h-full object-cover" loading="lazy">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     TRUST SECTION
+     Pasal 7.2: bukti sosial WAJIB tampil sebelum CTA final —
+     urutan psikologis: kenalan → percaya personal → lihat pilihan
+     → lihat bukti → percaya orang lain (Trust) → bertindak (CTA)
+     Pasal 4: social proof ASLI, bukan klaim brand sendiri
+     Pasal 1.2: kalau review asli belum ada, WAJIB sembunyikan
+     section ini dulu — jangan tayang dengan data dummy/palsu
+     Layout: beda dari Gallery (mosaic) — di sini pakai card
+     testimoni horizontal-scroll, focal point pada kutipan asli
+============================================================ -->
+<!-- Testimoni asli dari 6 pelanggan (teman tongkrongan, sudah coba
+     langsung, izin dikutip dan di-link ke IG mereka masing-masing).
+     Diaktifkan 2026-07-08. -->
+<section id="trust" class="py-24 md:py-32 bg-accent/8">
+  <div class="max-w-content mx-auto px-6 lg:px-10">
+
+    <div class="text-center max-w-xl mx-auto mb-14">
+      <p class="eyebrow-line justify-center font-body text-sm font-medium tracking-widest uppercase text-accent mb-4 flex items-center">Kata Mereka</p>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary leading-tight mb-4">
+        Bukan kata kami, kata yang udah nyobain.
+      </h2>
+    </div>
+
+    <!-- Slider testimoni — Swiper.js: loop otomatis, bisa di-swipe manual, pagination bullets -->
+    <div class="swiper testi-swiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="testi-card bg-base rounded-3xl p-7 border border-border h-full">
+            <div class="flex gap-1 text-accent mb-4" aria-label="Rating 5 dari 5 bintang">
+              <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+            </div>
+            <p class="font-body text-ink/75 text-sm leading-relaxed mb-5">
+              "Coffee Butterscotch-nya juara, manisnya pas ga eneg. Mocacino-nya juga sering gua pesen kalo lagi pengen yang lebih strong. Dua-duanya wajib coba."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                <i class='bx bxs-user text-accent text-lg'></i>
+              </div>
+              <div>
+                <p class="font-heading font-semibold text-sm text-primary">Rizal Tamvvvan</p>
+                <a href="https://www.instagram.com/mhmmdrizall_16" target="_blank" rel="noopener" class="font-body text-xs text-accent hover:text-primary transition-colors">@mhmmdrizall_16 ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testi-card bg-base rounded-3xl p-7 border border-border h-full">
+            <div class="flex gap-1 text-accent mb-4" aria-label="Rating 5 dari 5 bintang">
+              <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+            </div>
+            <p class="font-body text-ink/75 text-sm leading-relaxed mb-5">
+              "Nongkrong di sini enak banget, harga bersahabat buat kantong anak kuliahan. Kopinya konsisten enak tiap dateng."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                <i class='bx bxs-user text-accent text-lg'></i>
+              </div>
+              <div>
+                <p class="font-heading font-semibold text-sm text-primary">Via</p>
+                <a href="https://www.instagram.com/luviaaa_2y" target="_blank" rel="noopener" class="font-body text-xs text-accent hover:text-primary transition-colors">@luviaaa_2y ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testi-card bg-base rounded-3xl p-7 border border-border h-full">
+            <div class="flex gap-1 text-accent mb-4" aria-label="Rating 5 dari 5 bintang">
+              <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+            </div>
+            <p class="font-body text-ink/75 text-sm leading-relaxed mb-5">
+              "Awalnya iseng coba, eh keterusan. Rasa kopinya beneran niat racikannya, bukan asal-asalan."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                <i class='bx bxs-user text-accent text-lg'></i>
+              </div>
+              <div>
+                <p class="font-heading font-semibold text-sm text-primary">Risna</p>
+                <a href="https://www.instagram.com/risnahslls_" target="_blank" rel="noopener" class="font-body text-xs text-accent hover:text-primary transition-colors">@risnahslls_ ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testi-card bg-base rounded-3xl p-7 border border-border h-full">
+            <div class="flex gap-1 text-accent mb-4" aria-label="Rating 5 dari 5 bintang">
+              <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+            </div>
+            <p class="font-body text-ink/75 text-sm leading-relaxed mb-5">
+              "Tempatnya cozy buat ngobrol lama, kopinya juga ga bikin kantong bolong. Recommended sih."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                <i class='bx bxs-user text-accent text-lg'></i>
+              </div>
+              <div>
+                <p class="font-heading font-semibold text-sm text-primary">Hamzah</p>
+                <a href="https://www.instagram.com/iamhmzh_ra" target="_blank" rel="noopener" class="font-body text-xs text-accent hover:text-primary transition-colors">@iamhmzh_ra ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testi-card bg-base rounded-3xl p-7 border border-border h-full">
+            <div class="flex gap-1 text-accent mb-4" aria-label="Rating 5 dari 5 bintang">
+              <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+            </div>
+            <p class="font-body text-ink/75 text-sm leading-relaxed mb-5">
+              "Udah cobain beberapa menu, semuanya solid. Yang paling nempel di lidah tuh yang creamy-creamy gitu."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                <i class='bx bxs-user text-accent text-lg'></i>
+              </div>
+              <div>
+                <p class="font-heading font-semibold text-sm text-primary">Hamka</p>
+                <a href="https://www.instagram.com/hamkaadisapputra" target="_blank" rel="noopener" class="font-body text-xs text-accent hover:text-primary transition-colors">@hamkaadisapputra ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testi-card bg-base rounded-3xl p-7 border border-border h-full">
+            <div class="flex gap-1 text-accent mb-4" aria-label="Rating 5 dari 5 bintang">
+              <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+            </div>
+            <p class="font-body text-ink/75 text-sm leading-relaxed mb-5">
+              "Buka sampe jam 2 pagi jadi pas banget buat yang begadang. Kopinya juga tetep enak walau dateng malem-malem."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                <i class='bx bxs-user text-accent text-lg'></i>
+              </div>
+              <div>
+                <p class="font-heading font-semibold text-sm text-primary">Bicun</p>
+                <a href="https://www.instagram.com/akuui_ijal" target="_blank" rel="noopener" class="font-body text-xs text-accent hover:text-primary transition-colors">@akuui_ijal ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pagination bullets -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Navigation arrows — kustom, di luar swiper container biar gampang di-styling -->
+    <div class="flex items-center justify-center gap-4 mt-8">
+      <button type="button" class="testi-nav-prev w-11 h-11 rounded-full border border-border flex items-center justify-center hover:bg-accent hover:text-base hover:border-accent transition-colors" aria-label="Testimoni sebelumnya">
+        <i class='bx bx-chevron-left text-xl'></i>
+      </button>
+      <button type="button" class="testi-nav-next w-11 h-11 rounded-full border border-border flex items-center justify-center hover:bg-accent hover:text-base hover:border-accent transition-colors" aria-label="Testimoni selanjutnya">
+        <i class='bx bx-chevron-right text-xl'></i>
+      </button>
+    </div>
+
+    <style>
+      .testi-swiper { padding-bottom: 2.5rem; overflow: visible; width: 100%; max-width: 100%; box-sizing: border-box; }
+      .testi-swiper .swiper-wrapper { box-sizing: border-box; }
+      .testi-swiper .swiper-slide { box-sizing: border-box; max-width: 100%; }
+      .testi-swiper .swiper-slide { height: auto; display: flex; }
+      .testi-card { width: 100%; }
+      .testi-swiper .swiper-pagination { position: static; margin-top: 1.5rem; }
+      .testi-swiper .swiper-pagination-bullet { background: var(--color-border, #e5ddd0); opacity: 1; width: 8px; height: 8px; }
+      .testi-swiper .swiper-pagination-bullet-active { background: var(--color-accent, #b8925a); width: 22px; border-radius: 9999px; }
+    </style>
+
+    <!-- noscript / CDN-gagal fallback: styling murni via class dari JS, dipasang
+         HANYA kalau Swiper terbukti gagal diinisialisasi (lihat script di bawah) -->
+    <style>
+      .testi-swiper.js-fallback .swiper-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      @media (min-width: 768px) {
+        .testi-swiper.js-fallback .swiper-wrapper { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (min-width: 1024px) {
+        .testi-swiper.js-fallback .swiper-wrapper { grid-template-columns: repeat(3, 1fr); }
+      }
+      .testi-swiper.js-fallback .swiper-slide { width: 100% !important; }
+      .testi-swiper.js-fallback ~ div { display: none; }
+    </style>
+
+    <script>
+      (function () {
+        function initTestiSwiper() {
+          var el = document.querySelector('.testi-swiper');
+          if (typeof Swiper === 'undefined') {
+            // CDN gagal load — pasang class fallback biar tampilan tetap rapi (grid statis)
+            if (el) el.classList.add('js-fallback');
+            return;
+          }
+          var swiperInstance = new Swiper('.testi-swiper', {
+            loop: true,
+            spaceBetween: 24,
+            slidesPerView: 1.1,
+            centeredSlides: false,
+            grabCursor: true,
+            touchStartPreventDefault: false,
+            touchStartForcePreventDefault: false,
+            preventInteractionOnTransition: true,
+            resistance: true,
+            resistanceRatio: 0,
+            observer: true,       // auto re-kalkulasi kalau ukuran/DOM container berubah
+            observeParents: true, // ikut pantau perubahan di elemen parent juga
+            autoplay: {
+              delay: 3200,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true
+            },
+            pagination: {
+              el: '.testi-swiper .swiper-pagination',
+              clickable: true
+            },
+            navigation: {
+              prevEl: '.testi-nav-prev',
+              nextEl: '.testi-nav-next'
+            },
+            breakpoints: {
+              640: { slidesPerView: 1.6 },
+              768: { slidesPerView: 2.2 },
+              1024: { slidesPerView: 3 }
+            }
+          });
+          // Paksa kalkulasi ulang lebar sekali lagi setelah semua aset (font, gambar)
+          // selesai load, jaga-jaga kalau ukuran awal sempat salah hitung
+          if (swiperInstance && swiperInstance.update) {
+            setTimeout(function () { swiperInstance.update(); }, 300);
+          }
+        }
+
+        // Tunda init sampai seluruh halaman (termasuk CSS eksternal) selesai load,
+        // supaya Swiper nggak salah kalkulasi lebar container karena CSS belum siap
+        if (document.readyState === 'complete') {
+          initTestiSwiper();
+        } else {
+          window.addEventListener('load', initTestiSwiper);
+        }
+      })();
+    </script>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     LOKASI SECTION
+     Pasal 7.2: titik terakhir sebelum CTA final — kasih info
+     praktis yang dibutuhkan sebelum orang benar-benar order
+     Layout: foto+teks lagi TAPI ini section ke-2 berturut sejak
+     Trust (grid card) jadi masih sesuai Pasal 3.1 (maks 2 beruntun)
+============================================================ -->
+<!-- TODO SEBELUM GO-LIVE: lengkapi alamat & jam operasional asli -->
+<section id="lokasi" class="py-24 md:py-32 bg-base">
+  <div class="max-w-content mx-auto px-6 lg:px-10">
+    <div class="grid md:grid-cols-2 gap-14 md:gap-20 items-stretch">
+      <div class="order-2 md:order-1">
+        <p class="eyebrow-line font-body text-sm font-medium tracking-widest uppercase text-accent mb-5">Kunjungi Kami</p>
+        <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary leading-tight mb-8">
+          Lokasi & jam buka
+        </h2>
+
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <i class='bx bx-map-pin text-xl text-primary'></i>
+            </div>
+            <div>
+              <h4 class="font-heading font-semibold text-sm text-ink mb-1">Alamat</h4>
+              <p class="font-body text-sm text-ink/60 leading-relaxed">Gadog, dekat Alfamart — Jl. Raya Gadog, Kp. Pandansari, Kec. Ciawi, Kabupaten Bogor, Jawa Barat</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <i class='bx bx-time text-xl text-primary'></i>
+            </div>
+            <div>
+              <h4 class="font-heading font-semibold text-sm text-ink mb-1">Jam Operasional</h4>
+              <p class="font-body text-sm text-ink/60 leading-relaxed">14.00 – 02.00, setiap hari</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <i class='bx bxl-instagram-alt text-xl text-primary'></i>
+            </div>
+            <div>
+              <h4 class="font-heading font-semibold text-sm text-ink mb-1">Instagram</h4>
+              <p class="font-body text-sm text-ink/60 leading-relaxed">@cikopian.street</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Maps embed — patokan Alfamart Gadog, Kp. Pandansari (Pasal 7.2: info praktis wajib sebelum CTA final) -->
+        <div class="mt-8 rounded-3xl overflow-hidden border border-border">
+          <iframe
+            src="https://www.google.com/maps?q=Alfamart+Jl+Raya+Gadog+Kp+Pandansari+Ciawi+Bogor&output=embed"
+            width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Lokasi Cikopian Home Street, patokan Alfamart Gadog Pandansari">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- FOTO SEMENTARA dari Unsplash — ganti ke foto lokasi asli kapan saja siap -->
+      <div class="rounded-3xl overflow-hidden aspect-[4/3] md:aspect-auto order-1 md:order-2">
+        <img src="https://images.unsplash.com/photo-1753271414544-6924272498bd?fm=jpg&w=1000&h=1200&fit=crop&auto=format&q=80"
+             alt="Suasana booth Cikopian Home Street"
+             class="w-full h-full object-cover" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ SECTION (baru — 2026-07-08)
+     Pasal 7.2: objection handling wajib sebelum CTA final —
+     jawab keraguan praktis (jangkauan, waktu antar, bayar, custom)
+     sebelum orang benar-benar order. Layout: accordion sederhana,
+     beda dari section sebelumnya (foto-teks) dan sesudahnya (CTA box)
+============================================================ -->
+<section id="faq" class="py-24 md:py-32 bg-base">
+  <div class="max-w-content mx-auto px-6 lg:px-10">
+
+    <div class="text-center max-w-xl mx-auto mb-14">
+      <p class="eyebrow-line justify-center font-body text-sm font-medium tracking-widest uppercase text-accent mb-4 flex items-center">Masih Ragu?</p>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary leading-tight mb-4">
+        Pertanyaan yang sering ditanyain.
+      </h2>
+    </div>
+
+    <div class="max-w-2xl mx-auto space-y-3">
+
+      <div class="faq-item border border-border rounded-2xl overflow-hidden">
+        <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-heading font-semibold text-base text-ink">Area jangkauan delivery sampai mana aja?</span>
+          <i class='bx bx-chevron-down text-xl text-primary faq-icon'></i>
+        </button>
+        <div class="faq-panel hidden px-6 pb-5">
+          <p class="font-body text-sm text-ink/70 leading-relaxed">Seputaran Gadog dan Pandansari, deket Alfamart. Kalau lokasi kamu agak jauh dari situ, chat aja dulu di WhatsApp — nanti dicek bisa dijangkau atau ngga.</p>
+        </div>
+      </div>
+
+      <div class="faq-item border border-border rounded-2xl overflow-hidden">
+        <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-heading font-semibold text-base text-ink">Berapa lama pesanan diantar?</span>
+          <i class='bx bx-chevron-down text-xl text-primary faq-icon'></i>
+        </button>
+        <div class="faq-panel hidden px-6 pb-5">
+          <p class="font-body text-sm text-ink/70 leading-relaxed">Rata-rata 15-30 menit tergantung jarak dan lagi rame atau ngganya. Kalau lagi banyak pesanan, bakal dikasih tau estimasinya lewat chat.</p>
+        </div>
+      </div>
+
+      <div class="faq-item border border-border rounded-2xl overflow-hidden">
+        <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-heading font-semibold text-base text-ink">Bayarnya gimana, bisa cash?</span>
+          <i class='bx bx-chevron-down text-xl text-primary faq-icon'></i>
+        </button>
+        <div class="faq-panel hidden px-6 pb-5">
+          <p class="font-body text-sm text-ink/70 leading-relaxed">Bisa cash pas kopi diantar, atau transfer — tinggal bilang aja pas chat WhatsApp pesenannya mau bayar pakai apa.</p>
+        </div>
+      </div>
+
+      <div class="faq-item border border-border rounded-2xl overflow-hidden">
+        <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-heading font-semibold text-base text-ink">Bisa request less sugar atau tambah es?</span>
+          <i class='bx bx-chevron-down text-xl text-primary faq-icon'></i>
+        </button>
+        <div class="faq-panel hidden px-6 pb-5">
+          <p class="font-body text-sm text-ink/70 leading-relaxed">Bisa banget. Tinggal tulis aja request-nya pas chat, misal "less sugar" atau "es dikit" — nanti diracik sesuai permintaan.</p>
+        </div>
+      </div>
+
+      <div class="faq-item border border-border rounded-2xl overflow-hidden">
+        <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false">
+          <span class="font-heading font-semibold text-base text-ink">Minimal order berapa?</span>
+          <i class='bx bx-chevron-down text-xl text-primary faq-icon'></i>
+        </button>
+        <div class="faq-panel hidden px-6 pb-5">
+          <p class="font-body text-sm text-ink/70 leading-relaxed">Ngga ada minimal order. Pesan 1 gelas juga tetep diantar.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-trigger { background: transparent; cursor: pointer; transition: background 0.15s ease; }
+  .faq-trigger:hover { background: rgba(61, 43, 36, 0.03); }
+  .faq-icon { transition: transform 0.2s ease; }
+  .faq-item.is-open .faq-icon { transform: rotate(180deg); }
+  @media (prefers-reduced-motion: reduce) {
+    .faq-icon { transition: none; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const item = trigger.closest('.faq-item');
+      const panel = item.querySelector('.faq-panel');
+      const isOpen = item.classList.contains('is-open');
+
+      item.classList.toggle('is-open', !isOpen);
+      trigger.setAttribute('aria-expanded', String(!isOpen));
+      panel.classList.toggle('hidden', isOpen);
+    });
+  });
+</script>
+
+<!-- ============================================================
+     ORDER CTA — penutup fungsional sebelum footer
+     Pasal 7.1: CTA order sudah terlihat di 2 scroll pertama (navbar
+     + hero), ini adalah CTA penutup untuk yang sudah scroll sampai
+     akhir dan masih ragu. Pasal 4: GoFood/GrabFood wajib "Segera
+     Hadir" kalau link belum ada, dilarang href="#" kosong-aktif.
+============================================================ -->
+<section class="py-24 md:py-28 bg-base">
+  <div class="max-w-content mx-auto px-6 lg:px-10">
+    <div class="bg-primary rounded-[2.5rem] px-8 py-16 md:py-20 md:px-16 text-center">
+      <p class="eyebrow-line justify-center font-body text-sm font-medium tracking-widest uppercase text-accent-light mb-5 flex items-center">Siap Ngopi?</p>
+      <h2 class="font-heading font-bold text-3xl md:text-5xl text-base leading-tight mb-10 max-w-2xl mx-auto">
+        Pesan sekarang, diantar tanpa ribet.
+      </h2>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="https://wa.me/628999204277?text=Halo%20Cikopian%2C%20saya%20mau%20pesan%20kopi%20%E2%98%95"
+           target="_blank" rel="noopener"
+           class="btn-lift inline-flex items-center gap-2 bg-[#25D366] text-white font-heading font-semibold px-7 py-3.5 rounded-full text-[0.95rem]">
+          <i class='bx bxl-whatsapp text-lg'></i>
+          Pesan Sekarang
+        </a>
+        <!-- Disabled state jelas — bukan href="#" kosong-aktif (Pasal 4) -->
+        <span aria-disabled="true"
+           class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-base/50 font-heading font-medium px-7 py-3.5 rounded-full text-[0.95rem] cursor-not-allowed select-none">
+          <i class='bx bx-bowl-hot text-lg'></i>
+          GoFood — Segera Hadir
+        </span>
+        <span aria-disabled="true"
+           class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-base/50 font-heading font-medium px-7 py-3.5 rounded-full text-[0.95rem] cursor-not-allowed select-none">
+          <i class='bx bx-scooter text-lg'></i>
+          GrabFood — Segera Hadir
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     Di luar <main> secara semantik (landmark tersendiri)
+============================================================ -->
+<footer class="border-t border-border py-14">
+  <div class="max-w-content mx-auto px-6 lg:px-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+      <div>
+        <div class="font-heading font-bold text-lg text-primary flex items-center gap-2">
+          <i class='bx bxs-coffee-togo text-accent text-xl'></i>
+          Cikopian Home Street
+        </div>
+        <p class="font-body text-sm text-ink/50 italic mt-1.5 ml-7">Hemat di harga. Jangan hemat di rasa.</p>
+      </div>
+      <div class="flex items-center gap-7 font-body text-sm text-ink/60">
+        <a href="https://instagram.com/cikopian.street" target="_blank" rel="noopener" class="hover:text-primary transition-colors flex items-center gap-2">
+          <i class='bx bxl-instagram-alt text-base'></i> @cikopian.street
+        </a>
+        <a href="https://wa.me/628999204277" target="_blank" rel="noopener" class="hover:text-primary transition-colors flex items-center gap-2">
+          <i class='bx bxl-whatsapp text-base'></i> +62 0899-9204-277
+        </a>
+      </div>
+    </div>
+    <div class="mt-10 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3 font-body text-xs text-ink/40">
+      <span>© 2026 Cikopian Home Street. Seluruh hak cipta dilindungi.</span>
+      <span class="font-medium tracking-wide">#janganlupadikocok</span>
+      <a href="https://bytekk.vercel.app" target="_blank" rel="noopener" class="hover:text-primary transition-colors">MAHA KARYA #BYTEK</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     FLOATING WHATSAPP BUTTON (baru — 2026-07-08)
+     Muncul setelah scroll melewati Hero, biar CTA selalu terjangkau
+     tanpa perlu scroll balik ke atas. Clean, kecil, kanan bawah.
+============================================================ -->
+<a href="https://wa.me/628999204277?text=Halo%20Cikopian%2C%20saya%20mau%20pesan%20kopi%20%E2%98%95"
+   target="_blank" rel="noopener" id="floating-wa"
+   aria-label="Pesan lewat WhatsApp"
+   class="flex items-center justify-center shadow-xl">
+  <i class='bx bxl-whatsapp text-2xl'></i>
+</a>
+
+<style>
+  /* Class Tailwind purged tidak mencakup utility baru ini (opacity-0, pointer-events-none,
+     translate-y-3, bottom-6, right-6, z-40, w-14, h-14) — ditulis manual, bukan bug ganda. */
+  #floating-wa {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 40;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 9999px;
+    background-color: #25D366;
+    color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(0.75rem);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  #floating-wa.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) {
+    #floating-wa { transition: none; }
+  }
+  /* Desktop sudah punya tombol Pesan di navbar — floating WA cuma perlu di mobile */
+  @media (min-width: 768px) {
+    #floating-wa { display: none; }
+  }
+</style>
+
+<script>
+  // Navbar blur menguat saat scroll
+  const navbar = document.getElementById('navbar');
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('is-scrolled', window.scrollY > 20);
+    }, { passive: true });
+  }
+
+  // Floating WhatsApp button — muncul setelah lewat Hero (kira-kira 1 layar)
+  const floatingWa = document.getElementById('floating-wa');
+  if (floatingWa) {
+    window.addEventListener('scroll', () => {
+      floatingWa.classList.toggle('is-visible', window.scrollY > window.innerHeight * 0.6);
+    }, { passive: true });
+  }
+
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('mobile-menu-icon');
+
+  if (menuBtn && mobileMenu && menuIcon) {
+    menuBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(!isOpen));
+      menuIcon.classList.toggle('bx-menu', isOpen);
+      menuIcon.classList.toggle('bx-x', !isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuIcon.classList.add('bx-menu');
+        menuIcon.classList.remove('bx-x');
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
